@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:tint="#3F51B5"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ολοκλήρωση Δανεισμού"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Διάρκεια Δανεισμού:"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerDuration"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Τρόπος Παραλαβής:"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/rgDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+            <RadioButton
+                android:id="@+id/rbPickup"
+                android:text="Παραλαβή από κατάστημα" />
+            <RadioButton
+                android:id="@+id/rbShipping"
+                android:text="Αποστολή στον χώρο μου" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layoutPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <Spinner
+                android:id="@+id/spinnerPickupBranch"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutShipping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="Κινητό" />
+
+            <EditText
+                android:id="@+id/etUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="Email" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Διεύθυνση"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionNext" />
+
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Πόλη"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionNext" />
+
+            <EditText
+                android:id="@+id/etZip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Τ.Κ."
+                android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionDone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Άκυρο"
+                android:backgroundTint="#9E9E9E"
+                android:layout_marginEnd="5dp"/>
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ολοκλήρωση"
+                android:backgroundTint="#388E3C" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

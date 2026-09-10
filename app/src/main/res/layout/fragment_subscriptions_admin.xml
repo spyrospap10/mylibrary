@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTotalEarnings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Συνολικά Έσοδα: 0.00€"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#388E3C"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnActiveSubs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ενεργές"
+            android:backgroundTint="#3F51B5"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="4dp"/>
+        <Button
+            android:id="@+id/btnHistorySubs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ιστορικό"
+            android:backgroundTint="#9E9E9E"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAdminSubscriptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvEmptySubs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Δεν υπάρχουν ενεργές συνδρομές."
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:visibility="gone"/>
+</LinearLayout>

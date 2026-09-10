@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Επιλέξτε Πακέτο"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioGroup
+                android:id="@+id/rgPlans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPlanDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Μέρα\n(Test)"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#E0E0E0"/>
+
+                <RadioButton
+                    android:id="@+id/rbPlanMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Μήνας\n0.99€"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#E0E0E0"/>
+
+                <RadioButton
+                    android:id="@+id/rbPlanSixMonths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 Μήνες\n9.99€"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#E0E0E0"/>
+
+                <RadioButton
+                    android:id="@+id/rbPlanYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Χρόνος\n19.99€"
+                    android:padding="8dp"
+                    android:background="#E0E0E0"/>
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Τρόπος Πληρωμής"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbPayStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Πληρωμή στο Κατάστημα"/>
+            <RadioButton
+                android:id="@+id/rbPayCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Πληρωμή με Κάρτα"/>
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinnerStoreSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutCardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ονοματεπώνυμο Κατόχου"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Αριθμός Κάρτας"
+                android:inputType="number"
+                android:maxLength="16"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etCardExp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="ΗΗ/ΕΕ"
+                    android:inputType="number"
+                    android:digits="0123456789/"
+                    android:maxLength="5"
+                    android:layout_marginEnd="8dp"/>
+
+                <EditText
+                    android:id="@+id/etCardCvv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="CVV"
+                    android:inputType="number"
+                    android:maxLength="3"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmitPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ΕΠΙΒΕΒΑΙΩΣΗ ΠΛΗΡΩΜΗΣ"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvDialogMainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Προσθήκη Νέου Βιβλίου"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Τίτλος Βιβλίου"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etDialogYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Έτος Έκδοσης (π.χ. 2023)"
+        android:inputType="number"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Επιλογή Είδους:"
+        android:textColor="#666666" />
+
+    <Spinner
+        android:id="@+id/spinnerGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Επιλογή Συγγραφέα:"
+        android:textColor="#666666" />
+
+    <Spinner
+        android:id="@+id/spinnerAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Επιλογή Υποκαταστήματος:"
+        android:textColor="#666666" />
+    <Spinner
+        android:id="@+id/spinnerBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/etDialogStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Απόθεμα (Τεμάχια)"
+        android:inputType="number"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="Ακυρωση"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Αποθηκευση" />
+    </LinearLayout>
+
+</LinearLayout>

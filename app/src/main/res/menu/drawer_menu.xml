@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Αρχική" />
+        <item
+            android:id="@+id/nav_books"
+            android:icon="@drawable/ic_book"
+            android:title="Βιβλία" />
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/ic_menu_users"
+            android:title="Χρήστες" />
+        <item
+            android:id="@+id/nav_loans"
+            android:icon="@drawable/ic_menu_loans"
+            android:title="Δανεισμοί" />
+        <item
+            android:id="@+id/nav_subscriptions"
+            android:icon="@drawable/ic_subscriptions"
+            android:title="Συνδρομές" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="Γνωστοποιήσεις"
+            app:actionViewClass="android.widget.TextView" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info"
+            android:title="Στατιστικά" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_person"
+            android:title="Λογαριασμός" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Αποσύνδεση" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logged_in_user"
+                android:icon="@android:drawable/ic_secure"
+                android:title="Χρήστης: -"
+                android:enabled="false" />
+        </menu>
+    </item>
+
+</menu>
